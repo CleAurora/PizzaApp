@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		4240FFF92625BC3000D8C6FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4240FFF72625BC3000D8C6FF /* Main.storyboard */; };
 		4240FFFB2625BC3200D8C6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4240FFFA2625BC3200D8C6FF /* Assets.xcassets */; };
 		4240FFFE2625BC3200D8C6FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4240FFFC2625BC3200D8C6FF /* LaunchScreen.storyboard */; };
+		427436862625BE9300C77929 /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427436852625BE9300C77929 /* Signin.swift */; };
+		4274368E2625BF0200C77929 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274368D2625BF0200C77929 /* Pizza.swift */; };
+		427436952625C08600C77929 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 427436942625C08600C77929 /* Alamofire */; };
+		4274369A2625C0C400C77929 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427436992625C0C400C77929 /* BaseRepository.swift */; };
+		4274369F2625CAE600C77929 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274369E2625CAE600C77929 /* HttpMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		4240FFFA2625BC3200D8C6FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4240FFFD2625BC3200D8C6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4240FFFF2625BC3200D8C6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		427436852625BE9300C77929 /* Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
+		4274368D2625BF0200C77929 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		427436992625C0C400C77929 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		4274369E2625CAE600C77929 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427436952625C08600C77929 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +127,8 @@
 		4240FFF02625BC3000D8C6FF /* PizzaApp */ = {
 			isa = PBXGroup;
 			children = (
+				427436922625BF7A00C77929 /* Networking */,
+				427436842625BE7600C77929 /* Models */,
 				4240FFF12625BC3000D8C6FF /* AppDelegate.swift */,
 				4240FFF32625BC3000D8C6FF /* SceneDelegate.swift */,
 				4240FFF52625BC3000D8C6FF /* ViewController.swift */,
@@ -126,6 +138,24 @@
 				4240FFFF2625BC3200D8C6FF /* Info.plist */,
 			);
 			path = PizzaApp;
+			sourceTree = "<group>";
+		};
+		427436842625BE7600C77929 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				427436852625BE9300C77929 /* Signin.swift */,
+				4274368D2625BF0200C77929 /* Pizza.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		427436922625BF7A00C77929 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				427436992625C0C400C77929 /* BaseRepository.swift */,
+				4274369E2625CAE600C77929 /* HttpMethod.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +210,9 @@
 			dependencies = (
 			);
 			name = PizzaApp;
+			packageProductDependencies = (
+				427436942625C08600C77929 /* Alamofire */,
+			);
 			productName = PizzaApp;
 			productReference = 4240FFEE2625BC3000D8C6FF /* PizzaApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +248,9 @@
 				Base,
 			);
 			mainGroup = 4240FFE52625BC3000D8C6FF;
+			packageReferences = (
+				427436932625C08600C77929 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 4240FFEF2625BC3000D8C6FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,9 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4274369A2625C0C400C77929 /* BaseRepository.swift in Sources */,
 				4240FFF62625BC3000D8C6FF /* ViewController.swift in Sources */,
 				4240FFF22625BC3000D8C6FF /* AppDelegate.swift in Sources */,
+				4274369F2625CAE600C77929 /* HttpMethod.swift in Sources */,
 				4240FFF42625BC3000D8C6FF /* SceneDelegate.swift in Sources */,
+				4274368E2625BF0200C77929 /* Pizza.swift in Sources */,
+				427436862625BE9300C77929 /* Signin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +633,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		427436932625C08600C77929 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		427436942625C08600C77929 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 427436932625C08600C77929 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4240FFE62625BC3000D8C6FF /* Project object */;
 }
