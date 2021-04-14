@@ -11,10 +11,14 @@
 		424000142625BC3300D8C6FF /* PizzaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424000132625BC3300D8C6FF /* PizzaAppUITests.swift */; };
 		4240FFF22625BC3000D8C6FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4240FFF12625BC3000D8C6FF /* AppDelegate.swift */; };
 		4240FFF42625BC3000D8C6FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4240FFF32625BC3000D8C6FF /* SceneDelegate.swift */; };
-		4240FFF62625BC3000D8C6FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4240FFF52625BC3000D8C6FF /* ViewController.swift */; };
+		4240FFF62625BC3000D8C6FF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4240FFF52625BC3000D8C6FF /* SignInViewController.swift */; };
 		4240FFF92625BC3000D8C6FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4240FFF72625BC3000D8C6FF /* Main.storyboard */; };
 		4240FFFB2625BC3200D8C6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4240FFFA2625BC3200D8C6FF /* Assets.xcassets */; };
 		4240FFFE2625BC3200D8C6FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4240FFFC2625BC3200D8C6FF /* LaunchScreen.storyboard */; };
+		42467DF126266D1000C2CB7A /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42467DF026266D1000C2CB7A /* LoginRepository.swift */; };
+		42467DF626266EBC00C2CB7A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42467DF526266EBC00C2CB7A /* Session.swift */; };
+		42467DFB2626709200C2CB7A /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42467DFA2626709200C2CB7A /* Endpoints.swift */; };
+		42467E01262670E700C2CB7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42467E00262670E700C2CB7A /* Constants.swift */; };
 		427436862625BE9300C77929 /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427436852625BE9300C77929 /* Signin.swift */; };
 		4274368E2625BF0200C77929 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274368D2625BF0200C77929 /* Pizza.swift */; };
 		427436952625C08600C77929 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 427436942625C08600C77929 /* Alamofire */; };
@@ -49,11 +53,15 @@
 		4240FFEE2625BC3000D8C6FF /* PizzaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4240FFF12625BC3000D8C6FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4240FFF32625BC3000D8C6FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4240FFF52625BC3000D8C6FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4240FFF52625BC3000D8C6FF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4240FFF82625BC3000D8C6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4240FFFA2625BC3200D8C6FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4240FFFD2625BC3200D8C6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4240FFFF2625BC3200D8C6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42467DF026266D1000C2CB7A /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		42467DF526266EBC00C2CB7A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		42467DFA2626709200C2CB7A /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		42467E00262670E700C2CB7A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		427436852625BE9300C77929 /* Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
 		4274368D2625BF0200C77929 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		427436992625C0C400C77929 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
@@ -127,11 +135,12 @@
 		4240FFF02625BC3000D8C6FF /* PizzaApp */ = {
 			isa = PBXGroup;
 			children = (
+				42467DFF262670D300C2CB7A /* Commons */,
 				427436922625BF7A00C77929 /* Networking */,
 				427436842625BE7600C77929 /* Models */,
 				4240FFF12625BC3000D8C6FF /* AppDelegate.swift */,
 				4240FFF32625BC3000D8C6FF /* SceneDelegate.swift */,
-				4240FFF52625BC3000D8C6FF /* ViewController.swift */,
+				4240FFF52625BC3000D8C6FF /* SignInViewController.swift */,
 				4240FFF72625BC3000D8C6FF /* Main.storyboard */,
 				4240FFFA2625BC3200D8C6FF /* Assets.xcassets */,
 				4240FFFC2625BC3200D8C6FF /* LaunchScreen.storyboard */,
@@ -140,11 +149,20 @@
 			path = PizzaApp;
 			sourceTree = "<group>";
 		};
+		42467DFF262670D300C2CB7A /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				42467E00262670E700C2CB7A /* Constants.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		427436842625BE7600C77929 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				427436852625BE9300C77929 /* Signin.swift */,
 				4274368D2625BF0200C77929 /* Pizza.swift */,
+				42467DF526266EBC00C2CB7A /* Session.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +172,8 @@
 			children = (
 				427436992625C0C400C77929 /* BaseRepository.swift */,
 				4274369E2625CAE600C77929 /* HttpMethod.swift */,
+				42467DF026266D1000C2CB7A /* LoginRepository.swift */,
+				42467DFA2626709200C2CB7A /* Endpoints.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -311,12 +331,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4274369A2625C0C400C77929 /* BaseRepository.swift in Sources */,
-				4240FFF62625BC3000D8C6FF /* ViewController.swift in Sources */,
+				42467E01262670E700C2CB7A /* Constants.swift in Sources */,
+				42467DF126266D1000C2CB7A /* LoginRepository.swift in Sources */,
+				4240FFF62625BC3000D8C6FF /* SignInViewController.swift in Sources */,
 				4240FFF22625BC3000D8C6FF /* AppDelegate.swift in Sources */,
+				42467DFB2626709200C2CB7A /* Endpoints.swift in Sources */,
 				4274369F2625CAE600C77929 /* HttpMethod.swift in Sources */,
 				4240FFF42625BC3000D8C6FF /* SceneDelegate.swift in Sources */,
 				4274368E2625BF0200C77929 /* Pizza.swift in Sources */,
 				427436862625BE9300C77929 /* Signin.swift in Sources */,
+				42467DF626266EBC00C2CB7A /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

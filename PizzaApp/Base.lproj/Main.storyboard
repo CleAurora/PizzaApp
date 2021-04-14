@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onSignInTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="DQP-0q-cZZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15703830120000001" green="0.17296349999999999" blue="0.18729031090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,6 +107,10 @@
                             <constraint firstItem="LNA-OK-Btp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zEm-EY-L3t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="57p-Pi-mNN" id="0Nf-g5-KHQ"/>
+                        <outlet property="passwordTextField" destination="OHZ-1m-Ubq" id="mVR-rI-AiJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,7 +10,9 @@ import Alamofire
 class BaseRepository {
     func request<I: Encodable, O: Decodable>(url: String, method: HttpMethod = .get, argument: I? = nil,
                                              then handler: @escaping (Result<O, Error>) -> Void) {
-        AF.request(url, method: method.asAFHTTPMethod, parameters: argument).responseDecodable(of: O.self) { response in
+        AF.request(
+            url, method: method.asAFHTTPMethod, parameters: argument, encoder: JSONParameterEncoder.default
+        ).validate().responseDecodable(of: O.self) { response in
             do {
                 let result = try response.result.get()
 
